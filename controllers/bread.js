@@ -9,7 +9,8 @@ router.get('/', (req,res) => {
 //this ties back the url on local host to the bread data and sends the data model information
 router.get('/:index',(req,res) => {
     const { index } = req.params
-    res.send(Bread[index])
+    res.render('show',{bread:Bread[index]})
+    //res.send(Bread[index])
 })
 
 module.exports = router
